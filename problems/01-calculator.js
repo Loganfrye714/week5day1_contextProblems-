@@ -23,7 +23,29 @@ calculator.total // => returns 30
 
 function Calculator() {
 	this.total = 0;
+	this.add = function(num){
+		return this.total += num;
+	},
+	this.subtract = function(num){
+		return this.total -= num;
+	},
+	this.divide = function(num){
+		return this.total /= num;
+	},
+	this.multiply = function(num){
+		return this.total *= num;
+	}
 }
+let calculator = new Calculator();
+let calculator2 = new Calculator();
+
+// console.log(calculator2);
+console.log(calculator.add(50)); // => returns 50
+console.log(calculator.total);
+calculator.subtract(35); // => returns 15
+calculator.multiply(10); // => returns 150
+calculator.divide(5); // => returns 30
+calculator.total // => returns 30
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = Calculator;
